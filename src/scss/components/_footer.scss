@@ -1,0 +1,95 @@
+.footer {
+  outline: 0;
+  padding: 30px 15px;
+  background-color: #2f2f2f;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item {
+
+    &:hover {
+      padding: 5px 10px;
+      border-radius: 5px;
+      background-color: #fe5f5f;
+    }
+
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 44px;
+    }
+  }
+
+  &__link {
+    outline: 0;
+    color: #fff;
+    transition: background-color 0.3s, opacity 0.7s;
+
+    &:focus {
+      padding: 5px 10px;
+      border-radius: 5px;
+      background-color: green;
+      opacity: 0.7;
+    }
+  }
+
+  &__phone {
+    @include tablet {
+      display: block;
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 0;
+      margin-right: 0;
+      background-color: #fe5f5f;
+      width: 44px;
+      height: 44px;
+      font-size: 0;
+      background-image: url("../img/phone.svg");
+      background-position: center;
+      background-size: 24px 24px;
+      background-repeat: no-repeat;
+    }
+
+    &__phone {
+      @include tablet {
+        display: block;
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        padding: 0;
+        margin-right: 0;
+        background-color: #fe5f5f;
+        width: 44px;
+        height: 44px;
+        font-size: 0;
+        background-image: url("../img/phone.svg");
+        background-position: center;
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+      }
+
+    }
+
+  }
+}

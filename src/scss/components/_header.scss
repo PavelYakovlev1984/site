@@ -1,0 +1,155 @@
+.header {
+  position: absolute;
+  z-index: 5;
+  padding: 35px 0;
+  width: 100%;
+
+  &__body {
+    display: flex;
+    align-items: center;
+  }
+
+  &__katalog {
+    margin-right: auto;
+
+    &:hover {
+      background-color: #fe5f5f;
+    }
+
+    &:focus {
+      opacity: 0.7;
+      background-color: #fe5f5f;
+    }
+
+    &:active {
+      background-color: #fe5f5f;
+    }
+  }
+
+  &__link {
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: -1px;
+    color: #000;
+    background-color: transparent;
+
+    &--right {
+      margin-right: 0;
+    }
+
+    &:not(:last-child) {}
+
+    &--accent {
+      position: relative;
+      padding-left: 43px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 38px;
+        height: 38px;
+        background-image: url("../img/icon-help.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+      }
+    }
+
+    @include high-tablet {
+      display: none;
+    }
+  }
+}
+
+.burger {
+  margin-right: 15px;
+}
+}
+
+.nav {
+  @include high-tablet {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 160%;
+  }
+
+  @include high-tablet {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 500;
+    overflow-y: auto;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+}
+
+.menu--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.logo {
+  outline: 0;
+}
+
+.burger {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background-color: #fe5f5f;
+  width: 44px;
+  height: 44px;
+
+  &__line {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 2px;
+    width: 26px;
+    border-radius: 100px;
+    background-color: #fff;
+    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-50%);
+
+    &:first-child {
+      margin-top: -7px;
+    }
+
+    &:last-child {
+      left: 15px;
+      margin-top: 7px;
+      width: 13px;
+      transform: translate(-50%);
+    }
+  }
+}
+
+.burger {
+  display: none;
+
+  @include high-tablet {
+    display: block;
+  }
+}
+
+.burger-close {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background-color: #fe5f5f;
+  width: 44px;
+  height: 44px;
+  background-image: url("../img/phone.svg");
+  background-position: center;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+}

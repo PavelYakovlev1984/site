@@ -1,0 +1,24 @@
+.ques {
+  border-radius: 80% 80% 0 0;
+  padding-top: 48px;
+  padding-bottom: 68px;
+  text-align: center;
+  background-color: #f1f2f2;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 7px;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 1.485;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 29px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+}

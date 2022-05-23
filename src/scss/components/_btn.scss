@@ -1,0 +1,58 @@
+.btn {
+  display: inline-block;
+  margin-right: 21px;
+  border: none;
+  border-radius: 19px;
+  padding: 8px 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #fff;
+  opacity: 1;
+  transition: opacity 0.3s,
+    background-color 0.3s,
+    color 0.3s;
+  cursor: pointer;
+  outline: 0;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    opacity: 0.7;
+    background-color: #fe5f5f;
+    color: green;
+  }
+
+  &:active {
+    opacity: 0.3;
+    background-color: #fe5f5f;
+    color: #fe5f5f
+  }
+
+  &--red {
+    background-color: #fe5f5f;
+    color: #fff;
+    transition: opacity 0.3s, background-color 0.3s;
+
+    &:hover {
+      opacity: 0.5;
+      background-color: #3865a7;
+    }
+  }
+
+  &--blue {
+    background-color: #3865a7;
+    transition: opacity 0.3s, background-color 0.3s;
+
+    &:hover {
+      opacity: 0.5;
+      background-color: #fe5f5f;
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+}
